@@ -67,3 +67,20 @@ El mapa usa ahora el componente genérico `EmergencyLayers`, que lee `public/cap
   - validación institucional del lockup por Comunicación;
   - política de privacidad y términos propios de la USFQ (hoy enlazan a los de Global Emergency);
   - publicar el código del fork y apuntar `GITHUB_REPO_URL` a ese repositorio (lo exige la AGPL).
+
+## Portada, organizaciones y albergues (1-nov-2026, 12:20)
+
+- **Portada `/`:** reemplaza el directorio genérico de ResponseGrid con «Gestión de Emergencias — Sociedad Civil Galápagos».
+  - El texto fijo se edita en `apps/web/src/lib/portada-galapagos.ts`: albergues, agua, clima, lo que viene en camino, organizaciones, «Cuídate» y la fecha de actualización.
+  - «Lo que se necesita hoy» se lee en vivo de las necesidades validadas de la plataforma.
+- **Grupos de WhatsApp:** con QR, en `apps/web/src/lib/grupos-whatsapp.ts`. Se muestran en la portada, la página de la emergencia y el formulario de voluntariado.
+- **Precarga** (`seed-galapagos.mjs`):
+  - 8 organizaciones aliadas, solo instituciones, sin contactos personales.
+  - Centro de acopio oficial Cazares y 5 albergues, con coordenadas de OSM. El techado de Las Palmas está ubicado en el centro del barrio (CGREG) y falta ubicarlo exactamente.
+  - Necesidades del 1-nov y tareas con Funcavid y ECOS.
+  - Comunicado actualizado.
+- **Voluntariado:**
+  - Ya no pide municipio; se guarda «Galápagos».
+  - Teléfono en formato 0999 123 456.
+  - Capacidades nuevas en la API: `ngo` (ONG) y `government` (Organismo estatal).
+- **«Qué NO hacer»:** son los cuatro puntos de `dont_bring_items` en `i18n/messages/es.ts`.

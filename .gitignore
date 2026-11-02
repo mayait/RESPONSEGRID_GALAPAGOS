@@ -28,3 +28,9 @@ geodatos/geoserver-local/
 # Estudios: rasters intermedios y descargas crudas de APIs (se regeneran con los scripts)
 geodatos/estudios/**/*.tif
 geodatos/estudios/*/datos/lluvias/crudo/
+
+# Datos, estudios, clima y servidores se movieron a https://github.com/mayait/sosgalapagos-datos
+# (2-nov-2026). Las copias locales que queden aquí son restos de la migración.
+geodatos/
+mapas-galapagos/
+clima/
